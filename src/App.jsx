@@ -7,7 +7,7 @@ import Header from "./Components/Header/Header";
 function App() {
   const [selectedCourses, setSelectedCourses] = useState([]);
   const [totalCredit, setTotalCredit] = useState(0);
-  const [remainingCredit, setRemainingCredit] = useState(20);
+  const [remainingCredit, setRemainingCredit] = useState(0);
 
   const handleAddToCart = (course) => {
     const isSelectedCourse = selectedCourses.find(
@@ -15,13 +15,16 @@ function App() {
     );
 
     if (!isSelectedCourse) {
-      setSelectedCourses([...selectedCourses, course]);
       let allCredit = totalCredit + course.credit;
-      if (allCredit > 20) {
-        return alert("You can't cross total-credit more than 20.");
+      let remaining = 20 - course.credit;
+      if (allCredit > 20 || remaining < 0) {
+        return alert(
+          "You can't cross total-credit more than 20 and your credit remaining time cannot be below 0."
+        );
       } else {
-        setTotalCredit(totalCredit + course.credit);
-        setRemainingCredit(remainingCredit - course.credit);
+        setSelectedCourses([...selectedCourses, course]);
+        setTotalCredit(allCredit);
+        setRemainingCredit(remaining);
       }
     }
   };
