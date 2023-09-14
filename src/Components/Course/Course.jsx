@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Course = ({ course }) => {
+const Course = ({ course, handleAddToCart }) => {
   const { course_name, image, details, credit, price } = course;
   return (
     <div className="p-4 bg-base-100 rounded-xl">
@@ -30,7 +30,10 @@ const Course = ({ course }) => {
           </div>
         </div>
         <div className="">
-          <button className="btn btn-primary text-white w-full text-center">
+          <button
+            onClick={() => handleAddToCart(course)}
+            className="btn bg-[#2F80ED] hover:bg-[#2F80ED] hover:opacity-80 text-white w-full text-center"
+          >
             Select
           </button>
         </div>
@@ -41,6 +44,7 @@ const Course = ({ course }) => {
 
 Course.propTypes = {
   course: PropTypes.object.isRequired,
+  handleAddToCart: PropTypes.func,
 };
 
 export default Course;
