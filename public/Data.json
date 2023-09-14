@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "course_name": "Full-Stack Web Development",
+      "image": "https://i.ibb.co/7QBwSR1/web-development.jpg",
+      "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "credit": 3,
+      "price": 34999
+    },
+    {
+      "id": 2,
+      "course_name": "Data Science Fundamentals",
+      "image": "https://i.ibb.co/xzwjh96/Data-Science-Foundations.jpg",
+      "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "credit": 4,
+      "price": 79999
+    },
+    {
+      "id": 3,
+      "course_name": "Graphic Design Mastery",
+      "image": "https://i.ibb.co/bz9ccSF/Graphics-Design-Mastery.jpg",
+      "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "credit": 3,
+      "price": 64999
+    },
+    {
+      "id": 4,
+      "course_name": "Mobile App Development",
+      "image": "https://i.ibb.co/TMnQZG0/app-development-courses.png",
+      "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "credit": 4,
+      "price": 89999
+    },
+    {
+      "id": 5,
+      "course_name": "Digital Marketing Strategies",
+      "image": "https://i.ibb.co/qMJ6dNw/Master-Digital-Marketing-Skills.jpg",
+      "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "credit": 3,
+      "price": 54999
+    },
+    {
+      "id": 6,
+      "course_name": "Artificial Intelligence Essentials",
+      "image": "https://i.ibb.co/w7C5gYL/Artificial-Intelligence-Essentials.jpg",
+      "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "credit": 4,
+      "price": 99999
+    },
+    {
+      "id": 7,
+      "course_name": "Business Finance and Accounting",
+      "image": "https://i.ibb.co/BTvGBvc/Business-Finance-and-Accounting.jpg",
+      "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "credit": 3,
+      "price": 69999
+    },
+    {
+      "id": 8,
+      "course_name": "Photography for Beginners",
+      "image": "https://i.ibb.co/HBJ7gnJ/Photography-for-Beginners.webp",
+      "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "credit": 2,
+      "price": 39999
+    },
+    {
+      "id": 9,
+      "course_name": "Creative Writing Workshop",
+      "image": "https://i.ibb.co/sjpJ12M/Creative-Writing-Workshop.png",
+      "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "credit": 2,
+      "price": 49999
+    }
+  ]
+  
