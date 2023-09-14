@@ -7,11 +7,11 @@ function App() {
     <>
       <Header></Header>
       <main className="max-w-screen-2xl mx-auto px-5 md:px-10 lg:px-16">
-        <div className="md:flex gap-4">
-          <div className="md:w-2/3">
+        <div className="md:flex gap-6">
+          <div className="flex-1">
             <Courses></Courses>
           </div>
-          <div className="md:w-1/3">cart</div>
+          <div className="md:w-[300px]">cart</div>
         </div>
       </main>
     </>
