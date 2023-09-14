@@ -8,6 +8,7 @@ function App() {
   const [selectedCourses, setSelectedCourses] = useState([]);
   const [totalCredit, setTotalCredit] = useState(0);
   const [remainingCredit, setRemainingCredit] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const handleAddToCart = (course) => {
     const isSelectedCourse = selectedCourses.find(
@@ -16,7 +17,7 @@ function App() {
 
     if (!isSelectedCourse) {
       let allCredit = totalCredit + course.credit;
-      let remaining = 20 - course.credit;
+      let remaining = 20 - allCredit;
       if (allCredit > 20 || remaining < 0) {
         return alert(
           "You can't cross total-credit more than 20 and your credit remaining time cannot be below 0."
@@ -25,6 +26,7 @@ function App() {
         setSelectedCourses([...selectedCourses, course]);
         setTotalCredit(allCredit);
         setRemainingCredit(remaining);
+        setTotalPrice(totalPrice + course.price);
       }
     }
   };
@@ -41,6 +43,7 @@ function App() {
               selectedCourses={selectedCourses}
               totalCredit={totalCredit}
               remainingCredit={remainingCredit}
+              totalPrice={totalPrice}
             ></Cart>
           </div>
         </div>

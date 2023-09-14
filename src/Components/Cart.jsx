@@ -1,6 +1,11 @@
 import PropTypes from "prop-types";
 
-const Cart = ({ selectedCourses, totalCredit, remainingCredit }) => {
+const Cart = ({
+  selectedCourses,
+  totalCredit,
+  remainingCredit,
+  totalPrice,
+}) => {
   let count = 0;
   return (
     <div className="p-6 bg-base-100 rounded-xl">
@@ -20,6 +25,9 @@ const Cart = ({ selectedCourses, totalCredit, remainingCredit }) => {
       <h4 className="text-gray-500 font-medium my-4">
         Total Credit Hour : {totalCredit}
       </h4>
+      <h4 className="text-gray-500 font-medium my-4">
+        Total Price : {totalPrice} USD
+      </h4>
     </div>
   );
 };
@@ -28,6 +36,7 @@ Cart.propTypes = {
   selectedCourses: PropTypes.array,
   totalCredit: PropTypes.number,
   remainingCredit: PropTypes.number,
+  totalPrice: PropTypes.number,
 };
 
 export default Cart;
