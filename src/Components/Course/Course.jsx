@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { BsBook } from "react-icons/bs";
 import { FiDollarSign } from "react-icons/fi";
 
-const Course = ({ course, handleAddToCart }) => {
+const Course = ({ course, handleAddToCart, ToastContainer }) => {
   const { course_name, image, details, credit, price } = course;
   return (
     <div className="p-4 bg-base-100 rounded-xl">
@@ -40,6 +40,7 @@ const Course = ({ course, handleAddToCart }) => {
           >
             Select
           </button>
+          <ToastContainer />
         </div>
       </div>
     </div>
@@ -49,6 +50,7 @@ const Course = ({ course, handleAddToCart }) => {
 Course.propTypes = {
   course: PropTypes.object.isRequired,
   handleAddToCart: PropTypes.func,
+  ToastContainer: PropTypes.any,
 };
 
 export default Course;

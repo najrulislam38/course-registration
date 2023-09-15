@@ -3,7 +3,7 @@ import { useState } from "react";
 import Course from "../Course/Course";
 import PropTypes from "prop-types";
 
-const Courses = ({ handleAddToCart }) => {
+const Courses = ({ handleAddToCart, ToastContainer }) => {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
@@ -18,6 +18,7 @@ const Courses = ({ handleAddToCart }) => {
           key={course.id}
           course={course}
           handleAddToCart={handleAddToCart}
+          ToastContainer={ToastContainer}
         ></Course>
       ))}
     </div>
@@ -26,6 +27,7 @@ const Courses = ({ handleAddToCart }) => {
 
 Courses.propTypes = {
   handleAddToCart: PropTypes.func,
+  ToastContainer: PropTypes.any,
 };
 
 export default Courses;
