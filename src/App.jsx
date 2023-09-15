@@ -34,11 +34,11 @@ function App() {
     <>
       <Header></Header>
       <main className="max-w-screen-2xl mx-auto px-5 md:px-10 lg:px-16">
-        <div className="md:flex gap-6">
+        <div className="lg:flex gap-6">
           <div className="flex-1">
             <Courses handleAddToCart={handleAddToCart}></Courses>
           </div>
-          <div className="md:w-[180px] lg:w-[300px]">
+          <div className="lg:w-[300px]">
             <Cart
               selectedCourses={selectedCourses}
               totalCredit={totalCredit}

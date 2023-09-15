@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import { BsBook } from "react-icons/bs";
+import { FiDollarSign } from "react-icons/fi";
 
 const Course = ({ course, handleAddToCart }) => {
   const { course_name, image, details, credit, price } = course;
@@ -21,11 +23,13 @@ const Course = ({ course, handleAddToCart }) => {
         }`}*/}
         </h2>
         <p className="text-sm text-gray-600 mb-4">{details}</p>
-        <div className="flex justify-between items-center text-gray-600 font-medium mb-6">
-          <div>
+        <div className="flex flex-wrap justify-between items-center text-gray-600 font-medium mb-6">
+          <div className="flex items-center gap-2">
+            <FiDollarSign className="text-xl" />
             <span>Price: {price}</span>
           </div>
-          <div>
+          <div className="flex items-center gap-2">
+            <BsBook className="text-xl" />
             <span>Credit : {credit}hr</span>
           </div>
         </div>
