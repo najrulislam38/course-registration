@@ -10,10 +10,11 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   const [selectedCourses, setSelectedCourses] = useState([]);
   const [totalCredit, setTotalCredit] = useState(0);
-  const [remainingCredit, setRemainingCredit] = useState(0);
+  const [remainingCredit, setRemainingCredit] = useState(20);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  const alreadySelected = () => toast("You have already selected the course.");
+  const alreadySelected = () =>
+    toast("Oops! You have already selected the course.");
   const moreThan = () =>
     toast(
       "You can't cross total-credit more than 20 and your credit remaining time cannot be below 0."
@@ -27,7 +28,7 @@ function App() {
       return alreadySelected();
     } else {
       let allCredit = totalCredit + course.credit;
-      let remaining = 20 - allCredit;
+      let remaining = remainingCredit - course.credit;
       if (allCredit > 20 || remaining < 0) {
         return moreThan();
       } else {

@@ -10,7 +10,7 @@ const Cart = ({
   return (
     <div className="p-6 bg-base-100 rounded-xl">
       <h4 className="text-lg text-[#2F80ED] font-bold mb-4">
-        Credit Hour Remaining {remainingCredit}hr
+        Credit Hour Remaining {remainingCredit} hr
       </h4>
       <hr />
       <h3 className="text-xl font-bold mt-3">Course Name</h3>
