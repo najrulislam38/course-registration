@@ -15,7 +15,9 @@ function App() {
       (item) => item.id === course.id
     );
 
-    if (!isSelectedCourse) {
+    if (isSelectedCourse) {
+      return alert("You have already select the Course.");
+    } else {
       let allCredit = totalCredit + course.credit;
       let remaining = 20 - allCredit;
       if (allCredit > 20 || remaining < 0) {
